@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <link href="style.css" rel="stylesheet" type="text/css">
     <meta charset="utf-8">
     <title>File upload</title>
   </head>
@@ -8,7 +9,7 @@
     <h1>Upload your files</h1>
     <form action="/upload" method="post" enctype="multipart/form-data">
       <input type="file" name="fileFromClient">
-      <button type="submit">Upload</button>
+      <button type="submit" id="button">Upload</button>
     </form>
   </body>
 </html>
