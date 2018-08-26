@@ -11,5 +11,8 @@
       <input type="file" name="fileFromClient">
       <button type="submit" id="button">Upload</button>
     </form>
+    <% if (name !== null && size !== null) { %>
+      <h2><%= name %> is <%= size %> bytes!</h2>
+    <% } %>
   </body>
 </html>

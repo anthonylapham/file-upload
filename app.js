@@ -12,12 +12,12 @@ app.use(bodyParser.json());
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', { size: null, name: null });
 });
 
 app.post('/upload', upload.single('fileFromClient'), (req, res) => {
-  console.log(req.file);
-  res.render('index', { size: req.file.size })
+  const { size, originalname: name } = req.file;
+  res.render('index', { size, name });
 });
 
 const PORT = process.env.PORT || 3000;
